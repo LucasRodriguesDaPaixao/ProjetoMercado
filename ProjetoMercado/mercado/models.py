@@ -16,9 +16,13 @@ class Produto(models.Model):
 class Compra(models.Model):
     ID_compra = models.AutoField(primary_key=True)
     valor_total = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="Preço:")
+
     
 
 class Cliente(models.Model):
     ID_cliente = models.AutoField(primary_key=True)
     nome_cliente = models.CharField(max_length=100, verbose_name="Nome:")
     cpf = models.CharField(max_length=15, verbose_name="CPF:")
+
+    def __str__(self):
+        return self.nome_cliente
