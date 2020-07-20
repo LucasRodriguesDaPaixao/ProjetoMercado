@@ -7,7 +7,7 @@ from django.urls import path
 from django.contrib import admin
 from django.contrib.auth.views import LoginView, LogoutView
 from app import forms, views
-from mercado.views import Produto
+from mercado.views import Produto, Listagem
 
 
 urlpatterns = [
@@ -29,4 +29,5 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
     path('admin/', admin.site.urls),
     path('index/', Produto),
+    path('Listagem/', Listagem),
 ]

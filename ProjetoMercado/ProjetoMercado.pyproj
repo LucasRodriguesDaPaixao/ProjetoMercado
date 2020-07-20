@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="mercado\templates\mercado\index.html" />
+    <Content Include="mercado\templates\mercado\Listagem.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
