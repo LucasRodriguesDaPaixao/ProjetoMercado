@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models import Sum
 
 # Create your models here.
 class Cliente(models.Model):
@@ -86,3 +85,4 @@ class Compra(models.Model):
 
     def __str__(self):
         return "Compra: {} <--> {}".format(self.ID_compra, self.FK_cliente)
+   

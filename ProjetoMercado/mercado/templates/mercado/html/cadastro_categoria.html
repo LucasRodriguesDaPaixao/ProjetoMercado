@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% load bootstrap %}
+    {% load static %}
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Cadastro de Categorias</title>
+</head>
+<body>
+    <h2 class="container bg-dark text-light">Cadastro de Categorias</h2>
+
+    <form method="post" class="container bg-dark text-light">
+        {% csrf_token %} <!--cross reference security token-->
+        {{ form|bootstrap }}
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="{% url 'url_categorias'  %}"><button type="button" class="btn btn-primary">Voltar</button></a>
+        <button type="reset" class="btn btn-danger">Limpar</button>
+    </form>
+</body>
+</html>

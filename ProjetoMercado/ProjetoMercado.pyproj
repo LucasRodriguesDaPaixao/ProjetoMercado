@@ -39,8 +39,14 @@
     <Compile Include="manage.py" />
     <Compile Include="mercado\admin.py" />
     <Compile Include="mercado\apps.py" />
+    <Compile Include="mercado\form.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mercado\migrations\__init__.py" />
     <Compile Include="mercado\models.py" />
+    <Compile Include="mercado\static\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mercado\tests.py" />
     <Compile Include="mercado\views.py" />
     <Compile Include="mercado\__init__.py" />
@@ -61,13 +67,36 @@
     <Folder Include="app\templates\app\" />
     <Folder Include="mercado\" />
     <Folder Include="mercado\migrations\" />
+    <Folder Include="mercado\static\" />
+    <Folder Include="mercado\static\css\" />
+    <Folder Include="mercado\static\img\" />
     <Folder Include="mercado\templates\" />
     <Folder Include="mercado\templates\mercado\" />
+    <Folder Include="mercado\templates\mercado\html\" />
     <Folder Include="ProjetoMercado\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="mercado\templates\mercado\index.html" />
-    <Content Include="mercado\templates\mercado\Listagem.html" />
+    <Content Include="mercado\static\css\index.css" />
+    <Content Include="mercado\static\css\main.css" />
+    <Content Include="mercado\static\img\deletar.png" />
+    <Content Include="mercado\static\img\editar.png" />
+    <Content Include="mercado\static\img\imgFundo.png" />
+    <Content Include="mercado\static\img\imgFundoHome.png" />
+    <Content Include="mercado\templates\mercado\html\cadastro_categoria.html" />
+    <Content Include="mercado\templates\mercado\html\cadastro_cliente.html" />
+    <Content Include="mercado\templates\mercado\html\cadastro_compra.html" />
+    <Content Include="mercado\templates\mercado\html\cadastro_fornecedor.html" />
+    <Content Include="mercado\templates\mercado\html\cadastro_funcionario.html" />
+    <Content Include="mercado\templates\mercado\html\cadastro_produto.html" />
+    <Content Include="mercado\templates\mercado\html\cadastro_setor.html" />
+    <Content Include="mercado\templates\mercado\html\categorias.html" />
+    <Content Include="mercado\templates\mercado\html\clientes.html" />
+    <Content Include="mercado\templates\mercado\html\compras.html" />
+    <Content Include="mercado\templates\mercado\html\fornecedores.html" />
+    <Content Include="mercado\templates\mercado\html\funcionarios.html" />
+    <Content Include="mercado\templates\mercado\html\index.html" />
+    <Content Include="mercado\templates\mercado\html\produtos.html" />
+    <Content Include="mercado\templates\mercado\html\setores.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    {% load static %}
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <title>Fornecedores</title>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'url_index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'url_produtos' %}">Produtos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'url_fornecedores' %}">Fornecedores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'url_clientes' %}">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'url_categorias' %}">Categoria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'url_funcionarios' %}">Funcionarios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'url_compras' %}">Compras</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'url_setores' %}">Setor</a>
+            </li>
+        </ul>
+    </nav>
+
+    <table class="table table-dark table-hover">
+        <tr>
+            <th>Nome</th>
+            <th>EMail</th>
+            <th>CNPJ</th>
+            <th>Telefone</th>
+            <th>Opções</th>
+        </tr>
+        {% for fornecedor in Fornecedores %}
+        <tr>
+            <td>{{ fornecedor.nome_fornecedor }}</td>
+            <td>{{ fornecedor.email_fornecedor }}</td>
+            <td>{{ fornecedor.cnpj }}</td>
+            <td>{{ fornecedor.telefone }}</td>
+            <td>
+                <a href="{% url 'url_atualizar_fornecedor' fornecedor.ID_fornecedor %}"><img src="{% static "img/editar.png" %}" class="botaoOpcoes" alt="botão editar"></a>
+                <a href="{% url 'url_deletar_fornecedor' fornecedor.ID_fornecedor %}"><img src="{% static "img/deletar.png" %}" class="botaoOpcoes" alt="botão deletar"></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'url_cadastro_fornecedor' %}">
+        <button type="submit" class="btn btn-primary float-left">Cadastrar Fornecedor</button>
+    </a>
+
+</body>
+</html>
